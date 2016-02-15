@@ -76,26 +76,13 @@ void go(uint32_t size, uint32_t iter)
     srand(seed); 
   
     uint8_t *byte_array = generate_random_bytes(size);
-    // uint32_t rand_index =  random_int(0, size);
-    // printf("SIZE: %u  ITERS: %u ASM: %u\n", size, iter, useASM);
-
-    // uint64_t start = current_time();
-    // uint8_t b = byte_array[rand_index];
-
     for(uint32_t i = 0; i < iter; i ++){
         // Start time
-        // uint32_t rand_index =  random_int(0, size);
         uint64_t start = current_time();
-        // printf("byte at %u %hhu\n", i, byte_array[i]);
-        // uint8_t b = byte_array[rand_index];
         uint8_t b = byte_array[i];
         uint64_t end = current_time();  
-        printf("%u, %hhu, %llu\n", i, b, end - start);
-        // Print
+        printf("%u, %hhu, %u, %llu\n", i, b, size, end - start);
     }
-    // mean_time = (end-start)/size;
-    // printf("%u %hhu %llu ns\n", rand_index, b, end - start);
-
     free(byte_array);
 }
 
