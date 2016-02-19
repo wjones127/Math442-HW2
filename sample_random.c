@@ -4,21 +4,22 @@
 #include <stdlib.h>
 #include <time.h>
 #include <inttypes.h>
+#include "getRealTime.h"
 
 
-#ifdef __MACH__
+/*#ifdef __MACH__
 #include <mach/clock.h>
 #include <mach/mach.h>
 #endif
 
-#define BILLION  1E9
+#define BILLION  1E9 */
 
 /*
  * Used the following function to get time for Mac OS X.
  * Based on this snippet: https://gist.github.com/alfwatt/3588c5aa1f7a1ef7a3bb
  */
 
-int current_utc_time(struct timespec *ts) 
+/*int current_utc_time(struct timespec *ts) 
 {
 #ifdef __MACH__ // OS X does not have clock_gettime, use clock_get_time
     clock_serv_t cclock;
@@ -35,16 +36,16 @@ int current_utc_time(struct timespec *ts)
 }
 
 uint64_t current_time()
-{
+{*/
     /* returns time in milliseconds */
-    struct timespec tp;
+/* struct timespec tp;
     int res = current_utc_time(&tp); 
     if (res == -1) {
         fprintf(stderr, "Failure with clock_gettime");
         return 0;
     }
     return BILLION * tp.tv_sec + tp.tv_nsec;
-}
+}*/
 
 float random_float (int32_t lower_bound, int32_t upper_bound) 
 {
@@ -81,7 +82,7 @@ uint8_t * generate_random_bytes(size_t array_size)
 
 void go(uint32_t size, uint32_t iter, uint32_t buckets) 
 {
-    uint32_t seed = current_time();
+    uint32_t seed = getRealTime();
     srand(seed); 
 
     uint32_t bucket_size = (int)iter/buckets;
@@ -94,20 +95,20 @@ void go(uint32_t size, uint32_t iter, uint32_t buckets)
 
         // if (i%bucket_size == 0){
         free(rand_index);
-        seed = current_time();
+        seed = getRealTime();
         srand(seed); 
         rand_index = generate_random_ints(bucket_size, size);
         // } 
 
-        uint64_t start = current_time();
+        double start = getRealTime();
         for (uint32_t j = 0; j < bucket_size; j++){
             uint8_t b = byte_array[rand_index[j]];
             chksum += b;
         }
         // uint64_t start = current_time();
-        uint64_t end = current_time();  
-        double mean_time = (end-start)/(float)bucket_size;
-        printf("%u, %u, %f, %u\n", size, bucket_size, mean_time, chksum);
+        double end = getRealTime();  
+        double mean_time = (end-start)/(double)bucket_size;
+printf("%u, %u, %f, %u\n", size, bucket_size, mean_time, chksum);
         // Print
     }
     free(byte_array);

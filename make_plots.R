@@ -23,10 +23,12 @@ size.labels <- c(2^12,
 random.profile <- ggplot(rand.data, aes(x = size, y = time_ns)) + geom_point() + 
   scale_x_log10(breaks = size.labels) + 
   scale_y_log10() + 
-  geom_smooth() + 
+  #geom_smooth() + 
   geom_vline(aes(xintercept = 512000)) + 
-  geom_vline(aes(xintercept = 3000000)) +
-  geom_vline(aes(xintercept = 4000000000))
+  geom_vline(aes(xintercept = 3e6 + 512e3)) +
+  geom_vline(aes(xintercept = 4e9 + 3e6 + 512e3 )) +
+ # geom_vline(aes(xintercept = 8129644000)) + 
+  labs(title = "Random Access Latency on Will's Computer with Bucket Size 200",
+       x = "Size in Bytes", y = "Average Latency in Nanoseconds")
 
-
-ggsave(random.profile, file="random_profile.png")
+ggsave(random.profile, file="random_will.png")

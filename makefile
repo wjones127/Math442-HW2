@@ -6,7 +6,7 @@ sample_sequential: sample_sequential.c
 	gcc sample_sequential.c -Wall -Werror -Wextra -pedantic -O3 -g -o sample_sequential
 
 sample_random: sample_random.c
-	gcc sample_random.c -Wall -Wextra -pedantic -O3 -g -o sample_random
+	gcc sample_random.c getRealTime.c -Wall -Wextra -pedantic -O3 -g -o sample_random
 
 test_sequential: sample_sequential
 	./benchmark.sh > test_sequential.csv
