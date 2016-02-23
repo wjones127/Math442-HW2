@@ -12,11 +12,26 @@ data <- read.csv('data/test_binsize.csv') %>% tbl_df()
 
 size.labels <- 20 * 2^seq(2, 8, length.out = 4)
 
-random.profile <- ggplot(data, aes(x = bucket_size, y = time_ns)) + geom_point() + 
-  scale_x_log10(breaks = size.labels) + 
-  scale_y_log10() + 
-  geom_smooth(method="lm") + 
-  labs(title = "Random Access Latency on Will's Computer with Bucket Size 200",
-       x = "Number of Accesses Per Bin", y = "Average Latency in Nanoseconds")
 
-ggsave(random.profile, file="plots/out/binsize.pdf")
+
+random.profile <- ggplot(data, aes(x = bucket_size, y = time_ns)) +
+    geom_point(alpha = 0.3) + 
+  scale_x_continuous(breaks = size.labels) + 
+  scale_y_continuous(limits=c(0, 20)) + 
+  labs(title = "Average Random Access Latency by Bucket Size",
+       x = "Number of Accesses Per Bucket", y = "Average Latency in Nanoseconds")
+
+ggsave(random.profile, file="plots/out/binsize.png")
+
+
+# Try similar graph with inverse bucket size
+data$inv_bucket_size = 1 / data$bucket_size
+
+random.profile <- ggplot(data, aes(x = inv_bucket_size, y = time_ns)) +
+    geom_point(alpha = 0.3) + 
+  scale_x_continuous() + 
+  scale_y_continuous(limits=c(0, 20)) + 
+  labs(title = "Average Random Access Latency by Inverse Bucket Size",
+       x = "Inverse Bucket Size", y = "Average Latency in Nanoseconds")
+
+ggsave(random.profile, file="plots/out/inv_binsize.png")
