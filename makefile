@@ -18,4 +18,8 @@ test_random: build/sample_random
 	benchmarks/test_random.sh > data/test_random.csv
 	Rscript plots/random_plots.R
 
+test_binsize: build/sample_random
+	benchmarks/test_binsize.sh > data/test_binsize.csv
+	Rscript plots/binsize_plot.R
+
 # Part 2
