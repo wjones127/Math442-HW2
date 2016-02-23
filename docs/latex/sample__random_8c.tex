@@ -1,0 +1,149 @@
+\hypertarget{sample__random_8c}{}\section{sample\+\_\+random.\+c File Reference}
+\label{sample__random_8c}\index{sample\+\_\+random.\+c@{sample\+\_\+random.\+c}}
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$inttypes.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}get\+Real\+Time.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{sample__random_8c_aa96f27e76796dad0bd780cf1d2eefc4a}{random\+\_\+float} (int32\+\_\+t lower\+\_\+bound, int32\+\_\+t upper\+\_\+bound)
+\begin{DoxyCompactList}\small\item\em Gives random float in range. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{sample__random_8c_afa2d8180dff50887a81a3de7c1cbabc1}{random\+\_\+int} (int32\+\_\+t lower\+\_\+bound, int32\+\_\+t upper\+\_\+bound)
+\begin{DoxyCompactList}\small\item\em Gives a random positive 32-\/bit integer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{sample__random_8c_a8aa9e8cc1cea10556648f762a27f1e50}{random\+\_\+byte} ()
+\begin{DoxyCompactList}\small\item\em Gives a random byte. \end{DoxyCompactList}\item 
+uint32\+\_\+t $\ast$ \hyperlink{sample__random_8c_a9408ad71c7e4e324503718663d486c78}{generate\+\_\+random\+\_\+ints} (size\+\_\+t array\+\_\+size, uint32\+\_\+t bound)
+\begin{DoxyCompactList}\small\item\em Generates an array of non-\/negative integers less than bound. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \hyperlink{sample__random_8c_a2f8914bcd633c34e00dbccdc873d92d7}{generate\+\_\+random\+\_\+bytes} (size\+\_\+t array\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Gives an array of random bytes. \end{DoxyCompactList}\item 
+void \hyperlink{sample__random_8c_a6bff6366ba94c882f161e09214b361c3}{go} (uint32\+\_\+t size, uint32\+\_\+t iter, uint32\+\_\+t buckets)
+\item 
+int \hyperlink{sample__random_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{sample__random_8c_a2f8914bcd633c34e00dbccdc873d92d7}{}\index{sample\+\_\+random.\+c@{sample\+\_\+random.\+c}!generate\+\_\+random\+\_\+bytes@{generate\+\_\+random\+\_\+bytes}}
+\index{generate\+\_\+random\+\_\+bytes@{generate\+\_\+random\+\_\+bytes}!sample\+\_\+random.\+c@{sample\+\_\+random.\+c}}
+\subsubsection[{generate\+\_\+random\+\_\+bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ generate\+\_\+random\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{array\+\_\+size}
+\end{DoxyParamCaption}
+)}\label{sample__random_8c_a2f8914bcd633c34e00dbccdc873d92d7}
+
+
+Gives an array of random bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array\+\_\+size} & Number of bytes to generate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the allocated array of bytes 
+\end{DoxyReturn}
+\hypertarget{sample__random_8c_a9408ad71c7e4e324503718663d486c78}{}\index{sample\+\_\+random.\+c@{sample\+\_\+random.\+c}!generate\+\_\+random\+\_\+ints@{generate\+\_\+random\+\_\+ints}}
+\index{generate\+\_\+random\+\_\+ints@{generate\+\_\+random\+\_\+ints}!sample\+\_\+random.\+c@{sample\+\_\+random.\+c}}
+\subsubsection[{generate\+\_\+random\+\_\+ints}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t$\ast$ generate\+\_\+random\+\_\+ints (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{array\+\_\+size, }
+\item[{uint32\+\_\+t}]{bound}
+\end{DoxyParamCaption}
+)}\label{sample__random_8c_a9408ad71c7e4e324503718663d486c78}
+
+
+Generates an array of non-\/negative integers less than bound. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array\+\_\+size} & Number of integers in array \\
+\hline
+{\em bound} & Maximum size of integers \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the allocated array 
+\end{DoxyReturn}
+\hypertarget{sample__random_8c_a6bff6366ba94c882f161e09214b361c3}{}\index{sample\+\_\+random.\+c@{sample\+\_\+random.\+c}!go@{go}}
+\index{go@{go}!sample\+\_\+random.\+c@{sample\+\_\+random.\+c}}
+\subsubsection[{go}]{\setlength{\rightskip}{0pt plus 5cm}void go (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{size, }
+\item[{uint32\+\_\+t}]{iter, }
+\item[{uint32\+\_\+t}]{buckets}
+\end{DoxyParamCaption}
+)}\label{sample__random_8c_a6bff6366ba94c882f161e09214b361c3}
+\hypertarget{sample__random_8c_a3c04138a5bfe5d72780bb7e82a18e627}{}\index{sample\+\_\+random.\+c@{sample\+\_\+random.\+c}!main@{main}}
+\index{main@{main}!sample\+\_\+random.\+c@{sample\+\_\+random.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{sample__random_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+\hypertarget{sample__random_8c_a8aa9e8cc1cea10556648f762a27f1e50}{}\index{sample\+\_\+random.\+c@{sample\+\_\+random.\+c}!random\+\_\+byte@{random\+\_\+byte}}
+\index{random\+\_\+byte@{random\+\_\+byte}!sample\+\_\+random.\+c@{sample\+\_\+random.\+c}}
+\subsubsection[{random\+\_\+byte}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t random\+\_\+byte (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{sample__random_8c_a8aa9e8cc1cea10556648f762a27f1e50}
+
+
+Gives a random byte. 
+
+\begin{DoxyReturn}{Returns}
+A random 8-\/bit integer. 
+\end{DoxyReturn}
+\hypertarget{sample__random_8c_aa96f27e76796dad0bd780cf1d2eefc4a}{}\index{sample\+\_\+random.\+c@{sample\+\_\+random.\+c}!random\+\_\+float@{random\+\_\+float}}
+\index{random\+\_\+float@{random\+\_\+float}!sample\+\_\+random.\+c@{sample\+\_\+random.\+c}}
+\subsubsection[{random\+\_\+float}]{\setlength{\rightskip}{0pt plus 5cm}float random\+\_\+float (
+\begin{DoxyParamCaption}
+\item[{int32\+\_\+t}]{lower\+\_\+bound, }
+\item[{int32\+\_\+t}]{upper\+\_\+bound}
+\end{DoxyParamCaption}
+)}\label{sample__random_8c_aa96f27e76796dad0bd780cf1d2eefc4a}
+
+
+Gives random float in range. 
+
+Note\+: this implementation does not have a real uniform distribution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lower\+\_\+bound} & Smallest number possible \\
+\hline
+{\em upper\+\_\+bound} & Largest number possible \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a float 
+\end{DoxyReturn}
+\hypertarget{sample__random_8c_afa2d8180dff50887a81a3de7c1cbabc1}{}\index{sample\+\_\+random.\+c@{sample\+\_\+random.\+c}!random\+\_\+int@{random\+\_\+int}}
+\index{random\+\_\+int@{random\+\_\+int}!sample\+\_\+random.\+c@{sample\+\_\+random.\+c}}
+\subsubsection[{random\+\_\+int}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t random\+\_\+int (
+\begin{DoxyParamCaption}
+\item[{int32\+\_\+t}]{lower\+\_\+bound, }
+\item[{int32\+\_\+t}]{upper\+\_\+bound}
+\end{DoxyParamCaption}
+)}\label{sample__random_8c_afa2d8180dff50887a81a3de7c1cbabc1}
+
+
+Gives a random positive 32-\/bit integer. 
+
+Note\+: this implementation does not have a real uniform distribution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lower\+\_\+bound} & Smallest integer possible \\
+\hline
+{\em upper\+\_\+bound} & Largest integer possible \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a 32-\/bit unsigned integer 
+\end{DoxyReturn}

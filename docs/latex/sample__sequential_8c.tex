@@ -1,0 +1,152 @@
+\hypertarget{sample__sequential_8c}{}\section{src/sample\+\_\+sequential.c File Reference}
+\label{sample__sequential_8c}\index{src/sample\+\_\+sequential.\+c@{src/sample\+\_\+sequential.\+c}}
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$inttypes.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{sample__sequential_8c_a31f99d9c502b52b5f36dc7e2028c2e80}{B\+I\+L\+L\+I\+O\+N}~1\+E9
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{sample__sequential_8c_a11470434f2669a4df1486c39d81c38cb}{current\+\_\+utc\+\_\+time} (struct timespec $\ast$ts)
+\item 
+uint64\+\_\+t \hyperlink{sample__sequential_8c_aa95529fd8b200ddbb9ae71ea5c6055a3}{current\+\_\+time} ()
+\item 
+float \hyperlink{sample__sequential_8c_aa96f27e76796dad0bd780cf1d2eefc4a}{random\+\_\+float} (int32\+\_\+t lower\+\_\+bound, int32\+\_\+t upper\+\_\+bound)
+\begin{DoxyCompactList}\small\item\em Gives random float in range. \end{DoxyCompactList}\item 
+uint32\+\_\+t \hyperlink{sample__sequential_8c_afa2d8180dff50887a81a3de7c1cbabc1}{random\+\_\+int} (int32\+\_\+t lower\+\_\+bound, int32\+\_\+t upper\+\_\+bound)
+\begin{DoxyCompactList}\small\item\em Gives a random positive 32-\/bit integer. \end{DoxyCompactList}\item 
+uint8\+\_\+t \hyperlink{sample__sequential_8c_a8aa9e8cc1cea10556648f762a27f1e50}{random\+\_\+byte} ()
+\begin{DoxyCompactList}\small\item\em Gives a random byte. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \hyperlink{sample__sequential_8c_a2f8914bcd633c34e00dbccdc873d92d7}{generate\+\_\+random\+\_\+bytes} (size\+\_\+t array\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Gives an array of random bytes. \end{DoxyCompactList}\item 
+void \hyperlink{sample__sequential_8c_a0d4766dc8c8d1d891a2f4a9c74619c18}{go} (uint32\+\_\+t size, uint32\+\_\+t iter)
+\item 
+int \hyperlink{sample__sequential_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{sample__sequential_8c_a31f99d9c502b52b5f36dc7e2028c2e80}{}\index{sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}!B\+I\+L\+L\+I\+O\+N@{B\+I\+L\+L\+I\+O\+N}}
+\index{B\+I\+L\+L\+I\+O\+N@{B\+I\+L\+L\+I\+O\+N}!sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}}
+\subsubsection[{B\+I\+L\+L\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+L\+L\+I\+O\+N~1\+E9}\label{sample__sequential_8c_a31f99d9c502b52b5f36dc7e2028c2e80}
+
+
+\subsection{Function Documentation}
+\hypertarget{sample__sequential_8c_aa95529fd8b200ddbb9ae71ea5c6055a3}{}\index{sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}!current\+\_\+time@{current\+\_\+time}}
+\index{current\+\_\+time@{current\+\_\+time}!sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}}
+\subsubsection[{current\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t current\+\_\+time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{sample__sequential_8c_aa95529fd8b200ddbb9ae71ea5c6055a3}
+\hypertarget{sample__sequential_8c_a11470434f2669a4df1486c39d81c38cb}{}\index{sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}!current\+\_\+utc\+\_\+time@{current\+\_\+utc\+\_\+time}}
+\index{current\+\_\+utc\+\_\+time@{current\+\_\+utc\+\_\+time}!sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}}
+\subsubsection[{current\+\_\+utc\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}int current\+\_\+utc\+\_\+time (
+\begin{DoxyParamCaption}
+\item[{struct timespec $\ast$}]{ts}
+\end{DoxyParamCaption}
+)}\label{sample__sequential_8c_a11470434f2669a4df1486c39d81c38cb}
+\hypertarget{sample__sequential_8c_a2f8914bcd633c34e00dbccdc873d92d7}{}\index{sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}!generate\+\_\+random\+\_\+bytes@{generate\+\_\+random\+\_\+bytes}}
+\index{generate\+\_\+random\+\_\+bytes@{generate\+\_\+random\+\_\+bytes}!sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}}
+\subsubsection[{generate\+\_\+random\+\_\+bytes}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t$\ast$ generate\+\_\+random\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{array\+\_\+size}
+\end{DoxyParamCaption}
+)}\label{sample__sequential_8c_a2f8914bcd633c34e00dbccdc873d92d7}
+
+
+Gives an array of random bytes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array\+\_\+size} & Number of bytes to generate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the allocated array of bytes 
+\end{DoxyReturn}
+\hypertarget{sample__sequential_8c_a0d4766dc8c8d1d891a2f4a9c74619c18}{}\index{sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}!go@{go}}
+\index{go@{go}!sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}}
+\subsubsection[{go}]{\setlength{\rightskip}{0pt plus 5cm}void go (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{size, }
+\item[{uint32\+\_\+t}]{iter}
+\end{DoxyParamCaption}
+)}\label{sample__sequential_8c_a0d4766dc8c8d1d891a2f4a9c74619c18}
+\hypertarget{sample__sequential_8c_a3c04138a5bfe5d72780bb7e82a18e627}{}\index{sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}!main@{main}}
+\index{main@{main}!sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{sample__sequential_8c_a3c04138a5bfe5d72780bb7e82a18e627}
+\hypertarget{sample__sequential_8c_a8aa9e8cc1cea10556648f762a27f1e50}{}\index{sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}!random\+\_\+byte@{random\+\_\+byte}}
+\index{random\+\_\+byte@{random\+\_\+byte}!sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}}
+\subsubsection[{random\+\_\+byte}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t random\+\_\+byte (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{sample__sequential_8c_a8aa9e8cc1cea10556648f762a27f1e50}
+
+
+Gives a random byte. 
+
+\begin{DoxyReturn}{Returns}
+A random 8-\/bit integer. 
+\end{DoxyReturn}
+\hypertarget{sample__sequential_8c_aa96f27e76796dad0bd780cf1d2eefc4a}{}\index{sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}!random\+\_\+float@{random\+\_\+float}}
+\index{random\+\_\+float@{random\+\_\+float}!sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}}
+\subsubsection[{random\+\_\+float}]{\setlength{\rightskip}{0pt plus 5cm}float random\+\_\+float (
+\begin{DoxyParamCaption}
+\item[{int32\+\_\+t}]{lower\+\_\+bound, }
+\item[{int32\+\_\+t}]{upper\+\_\+bound}
+\end{DoxyParamCaption}
+)}\label{sample__sequential_8c_aa96f27e76796dad0bd780cf1d2eefc4a}
+
+
+Gives random float in range. 
+
+Note\+: this implementation does not have a real uniform distribution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lower\+\_\+bound} & Smallest number possible \\
+\hline
+{\em upper\+\_\+bound} & Largest number possible \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a float 
+\end{DoxyReturn}
+\hypertarget{sample__sequential_8c_afa2d8180dff50887a81a3de7c1cbabc1}{}\index{sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}!random\+\_\+int@{random\+\_\+int}}
+\index{random\+\_\+int@{random\+\_\+int}!sample\+\_\+sequential.\+c@{sample\+\_\+sequential.\+c}}
+\subsubsection[{random\+\_\+int}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t random\+\_\+int (
+\begin{DoxyParamCaption}
+\item[{int32\+\_\+t}]{lower\+\_\+bound, }
+\item[{int32\+\_\+t}]{upper\+\_\+bound}
+\end{DoxyParamCaption}
+)}\label{sample__sequential_8c_afa2d8180dff50887a81a3de7c1cbabc1}
+
+
+Gives a random positive 32-\/bit integer. 
+
+Note\+: this implementation does not have a real uniform distribution.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lower\+\_\+bound} & Smallest integer possible \\
+\hline
+{\em upper\+\_\+bound} & Largest integer possible \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a 32-\/bit unsigned integer 
+\end{DoxyReturn}
