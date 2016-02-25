@@ -22,4 +22,8 @@ test_binsize: build/sample_random
 	benchmarks/test_binsize.sh > data/test_binsize.csv
 	Rscript plots/binsize_plot.R
 
+# Warning: this may take a while...
+test_model: build/sample_random
+	benchmarks/test_model_l1l2.sh > data/test_model.csv
+	Rscript plots/model_l1_l2.R
 # Part 2

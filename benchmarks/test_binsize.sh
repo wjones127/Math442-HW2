@@ -2,7 +2,7 @@
 echo "size, bucket_size, time_ns, checksum"
 
 # -----------------------------------------------------------------------------#
-# BIN SIZE TEST
+# BUCKET SIZE TEST
 # -----------------------------------------------------------------------------#
 # Because it's near impossible to get enough time granularity to measure one
 # memory access, we bin memory accesses when timing them and compute the average
