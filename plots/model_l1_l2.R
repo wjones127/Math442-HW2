@@ -8,7 +8,9 @@ library(rstan)
 data <- read.csv('data/test_model.csv') %>% tbl_df()
 
 # let's take a smaller sample of the data
-data <- data[sample(1:nrow(data), size=1e4, replace=FALSE),]
+data <- data[sample(1:nrow(data), size=1e3, replace=FALSE),]
+
+# todo: rescale variables.... log scale?
 
 # Package the data for stan
 model_data = list(
@@ -33,8 +35,12 @@ out = rstan::sampling(
   , seed = 1
   , init = list(list(tL1 = 2,
                 tL2 = 3,
+                tL3 = 5,
+                tRAM = 100,
                 cL1 = 128,
                 cL2 = 200000,
+                cL3 = 3e6,
+                cRAM = 5e9,
                 delta = 3,
                 epsilon = 3,
                 sigma = 1))
