@@ -1,0 +1,96 @@
+results for code 0: 
+	eax: 469778721, 
+	ebx: 29360191, 
+	ecx: 63, 
+	edx: 0
+
+	results for EAX
+	EAX: 469778721
+		Cache Type:  1
+		Cache Level:  1
+		Self initializing cache: 1 
+		Fully associative: 0
+	EBX: 29360191
+		Line Size: 64
+		Line Partitions: 1
+		Ways of associativity: 8
+results for code 1: 
+	eax: 469778722, 
+	ebx: 29360191, 
+	ecx: 63, 
+	edx: 0
+
+	results for EAX
+	EAX: 469778722
+		Cache Type:  2
+		Cache Level:  1
+		Self initializing cache: 1 
+		Fully associative: 0
+	EBX: 29360191
+		Line Size: 64
+		Line Partitions: 1
+		Ways of associativity: 8
+results for code 2: 
+	eax: 469778755, 
+	ebx: 29360191, 
+	ecx: 511, 
+	edx: 0
+
+	results for EAX
+	EAX: 469778755
+		Cache Type:  3
+		Cache Level:  2
+		Self initializing cache: 1 
+		Fully associative: 0
+	EBX: 29360191
+		Line Size: 64
+		Line Partitions: 1
+		Ways of associativity: 8
+results for code 3: 
+	eax: 470008163, 
+	ebx: 46137407, 
+	ecx: 8191, 
+	edx: 6
+
+	results for EAX
+	EAX: 470008163
+		Cache Type:  3
+		Cache Level:  3
+		Self initializing cache: 1 
+		Fully associative: 0
+	EBX: 46137407
+		Line Size: 64
+		Line Partitions: 1
+		Ways of associativity: 12
+results for code 4: 
+	eax: 470008195, 
+	ebx: 62976063, 
+	ecx: 8191, 
+	edx: 4
+
+	results for EAX
+	EAX: 470008195
+		Cache Type:  3
+		Cache Level:  4
+		Self initializing cache: 1 
+		Fully associative: 0
+	EBX: 62976063
+		Line Size: 64
+		Line Partitions: 16
+		Ways of associativity: 16
+results for code 5: 
+	eax: 0, 
+	ebx: 0, 
+	ecx: 0, 
+	edx: 0
+
+	results for EAX
+	EAX: 0
+		Cache Type:  0
+		Cache Level:  0
+		Self initializing cache: 0 
+		Fully associative: 0
+	EBX: 0
+		Line Size: 1
+		Line Partitions: 1
+		Ways of associativity: 1

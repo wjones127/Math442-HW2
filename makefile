@@ -16,10 +16,15 @@ test_sequential: build/sample_sequential
 
 test_random: build/sample_random
 	benchmarks/test_random.sh > data/test_random.csv
-	Rscript plots/random_plots.R
+	Rscript plots/make_plots.R
 
 test_binsize: build/sample_random
 	benchmarks/test_binsize.sh > data/test_binsize.csv
 	Rscript plots/binsize_plot.R
 
 # Part 2
+
+
+# Part 3: Analysis
+cpuid_info: src/cpuid_cache.c
+	gcc src/cpuid_cache.c $(CFLAGS) -o build/cpuid_cache
