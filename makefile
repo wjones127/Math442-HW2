@@ -8,7 +8,7 @@ sample_sequential: src/sample_sequential.c
 	gcc src/sample_sequential.c $(CFLAGS) -o build/sample_sequential
 
 sample_random: src/sample_random.c
-	gcc src/sample_random.c src/getRealTime.c $(CFLAGS) -o build/sample_random
+	gcc src/sample_random.c src/getRealTime.c src/random.c $(CFLAGS) -o build/sample_random
 
 test_sequential: build/sample_sequential
 	benchmarks/test_sequential.sh > data/test_sequential.csv

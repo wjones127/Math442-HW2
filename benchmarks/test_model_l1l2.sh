@@ -9,11 +9,11 @@ echo "size, bucket_size, time_ns, checksum"
 # the cache sizes and even the cache latencies.
 
 # Loop over size
-for (( k = 2**12; k <= 2**25; k *= 2))
+for (( k = 2**12; k <= 2**21; k += 2**12))
 do
     # Loop over num buckets
-    for (( i = 100; i <= 5000; i += 200))
+    for (( i = 100; i <= 5000; i += 50))
     do
-        build/sample_random $k 100000 $i
+        build/sample_random $k 50 $i
     done
 done

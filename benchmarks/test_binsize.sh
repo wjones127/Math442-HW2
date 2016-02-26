@@ -13,5 +13,5 @@ echo "size, bucket_size, time_ns, checksum"
 # Loop over number of bins, keeping
 for (( k = 50; k <= 5000; k += 50))
 do
-    build/sample_random 256 100000 $k
+    build/sample_random 256 20 $k
 done
