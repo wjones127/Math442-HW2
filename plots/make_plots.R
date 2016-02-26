@@ -9,7 +9,7 @@ library(dplyr)
 #seq.data <- read.csv('data/test1.csv') %>%
 #  mutate(method = "sequential") %>%
 #  tbl_df()
-rand.data <- read.csv('test_random.csv') %>%
+rand.data <- read.csv('data/test_random_ifj.csv') %>%
   mutate(method = "random") %>%
   tbl_df()
 
@@ -25,10 +25,10 @@ random.profile <- ggplot(rand.data, aes(x = size, y = time_ns)) + geom_point() +
   scale_y_log10() + 
   #geom_smooth() + 
   geom_vline(aes(xintercept = 512000)) + 
-  geom_vline(aes(xintercept = 3e6 + 512e3)) +
-  geom_vline(aes(xintercept = 4e9 + 3e6 + 512e3 )) +
+  geom_vline(aes(xintercept = 3e6)) +
+  geom_vline(aes(xintercept = 4e9)) +
  # geom_vline(aes(xintercept = 8129644000)) + 
-  labs(title = "Random Access Latency on Will's Computer with Bucket Size 200",
+  labs(title = "Random Access Latency on Isabella's Computer with Bucket Size 200",
        x = "Size in Bytes", y = "Average Latency in Nanoseconds")
 
-ggsave(random.profile, file="random_will.png")
+ggsave(random.profile, file="random_ifj2.png")

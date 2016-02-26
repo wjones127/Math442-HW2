@@ -8,7 +8,7 @@ library(dplyr)
 #plot.name <- commandArgs(trailingOnly = TRUE)[1]
 #file.name
 
-data <- read.csv('data/test_binsize.csv') %>% tbl_df()
+data <- read.csv('data/test_binsize_ifj.csv') %>% tbl_df()
 
 size.labels <- 20 * 2^seq(2, 8, length.out = 4)
 
@@ -34,4 +34,4 @@ random.profile <- ggplot(data, aes(x = inv_bucket_size, y = time_ns)) +
   labs(title = "Average Random Access Latency by Inverse Bucket Size",
        x = "Inverse Bucket Size", y = "Average Latency in Nanoseconds")
 
-ggsave(random.profile, file="plots/out/inv_binsize.png")
+ggsave(random.profile, file="plots/out/inv_binsize_ifj.png")
