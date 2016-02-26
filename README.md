@@ -1,5 +1,7 @@
 # Math 442 HW2: Benchmarking the Memory Hierarchy
 
+This is a collaboration between Will Jones (wjones127) and Isabella Jorissen (ifjorissen).
+
 From the assignment:
 
 > The main goal of this exercise is to empirically determine the sizes of the
